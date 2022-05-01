@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap";
+@import "node_modules/@fortawesome/fontawesome-free/scss/variables";
+
+$font-size-xl: $font-size-base * 1.75;
+
+.bst-bg-orange{
+    background-color: $orange;
+} 
+.bst-bg-green{
+    background-color: $green;
+} 
+.bst-bg-teal{
+    background-color: $teal;
+}
+.bst-nav-brand {
+    font-size: $font-size-xl;
+}
+.bst-nav-link {
+    font-size: $font-size-lg;
+    color: rgba($white, 1);
+}

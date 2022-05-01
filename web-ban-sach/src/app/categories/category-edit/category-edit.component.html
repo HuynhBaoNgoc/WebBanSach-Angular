@@ -1,0 +1,44 @@
+<div class="row mt-5">
+    <div class="col-sm-12">
+        <form class="form" [formGroup]="categoryForm" (ngSubmit)="onSubmit(categoryForm)">
+            <input type="hidden" id="_id" name="_id" formControlName="_id">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="name">
+                            Tên loại sách
+                        </label>
+                        <input type="text"
+                            id="name"
+                            class="form-control"
+                            formControlName="name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="cateID">
+                            Mã loại sách
+                        </label>
+                        <input type="text"
+                            id="cateID"
+                            class="form-control"
+                            formControlName="cateID">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-success mr-1">
+                            Save
+                    </button>
+                    <button type="button" class="btn btn-danger" (click)="onCancel()">
+                            Cancel
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

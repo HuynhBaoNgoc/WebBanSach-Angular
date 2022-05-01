@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-sm-6 mb-4">
+        <div class="row">
+            <div class="col-xl-12">
+                <img src="{{ book.imgPath }}" alt="" style="max-height: 280px;">
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 mb-4">
+        <div class="row mb-3">
+            <div class="col-sm-12">
+                <h4><span class="product-label">Mã sách: </span>{{ book.productID }}</h4>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-12">
+                <h2 class="product-name">{{ book.name }}</h2>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-12">
+                <h3 class="product-price text-success text-bold"><span class="product-label">Giá sách: </span>{{ book.price }} <span class="product-label">VNĐ</span></h3>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-12">
+                <h4><span class="product-label">Mã loại sách: </span>{{ book.cateID }}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Quản lý sách
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" (click)="onEditBook()" style="cursor: pointer;">Sửa thông tin sách</a></li>
+                          <li><a class="dropdown-item" (click)="onDeleteBook()" style="cursor: pointer;">Xóa sách</a></li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="product-description">{{ book.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>

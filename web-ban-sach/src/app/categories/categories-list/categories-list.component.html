@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-success me-2" (click)="onNewCategory()">Thêm loại sách</button>
+        <button class="btn btn-primary" (click)="onRefresh()">Làm mới danh sách</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="">
+            <app-category-item 
+                *ngFor="let categoryItem of categoriesService.categories; let i = index" 
+                [category]="categoryItem"
+                [index] = "i">
+            </app-category-item>
+        </div>
+    </div>
+</div>

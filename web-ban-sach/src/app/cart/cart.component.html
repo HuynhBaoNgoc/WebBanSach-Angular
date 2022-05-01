@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-12 col-sm-12">            
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Mã sách</th>
+                    <th scope="col">Tên sách</th>
+                    <th scope="col">Giá sách</th>
+                    <th scope="col">Hình ảnh</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let book of books" class="align-items-start">
+                    <th scope="row">{{ book.productID }}</th>
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.price }} VNĐ</td>
+                    <td><img [src]="book.imgPath" alt="{{ book.name }}" style="max-height: 45px;"></td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+</div>

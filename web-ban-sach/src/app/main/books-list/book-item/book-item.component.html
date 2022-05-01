@@ -1,0 +1,25 @@
+<a style="cursor: pointer;" 
+    class="list-group-item list-group-item-action 
+        flex-column 
+        align-items-start
+        border border-info border-1 rounded-3
+        mb-3" 
+    [routerLink]="index" 
+    routerLinkActive="active">
+    <div class="row">
+        <div class="col-7 col-sm-7">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ book.productID }}</h5>
+            </div>
+            <p class="mb-1 product-name">{{ book.name }}</p>
+            <p class="mb-1"><span class="text-success">{{ book.price }} </span>VNĐ</p>
+        </div>
+        <div class="col-5 col-sm-5">
+            <span>
+                <img [src]="book.imgPath"
+                alt="{{ book.name }}"
+                style="max-height: 70px;">
+            </span>
+        </div>
+    </div>
+</a>

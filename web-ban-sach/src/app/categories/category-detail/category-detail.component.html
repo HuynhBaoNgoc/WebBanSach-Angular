@@ -1,0 +1,54 @@
+<div class="row mt-4">
+    <div class="col-sm-12">
+        <span class="me-5 fs-5">Mã loại sách:  <span class="px-3 fs-5 badge bg-secondary rounded-pill">{{ category.cateID }}</span></span>
+        <span class="me-5 fs-5">Tên loại:  <span class="px-3 fs-5 badge bg-secondary rounded-pill">{{ category.name }}</span></span>
+        <div class="btn-group float-end" role="group" aria-label="Button group with nested dropdown">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Quản lý loại sách
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li>
+                        <a class="dropdown-item" (click)="onBook(category.cateID)" style="cursor: pointer;">
+                            Hiện danh sách sách
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" (click)="onEditCategory()" style="cursor: pointer;">
+                            Sửa thông tin loại sách
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" (click)="onDeleteCategory()" style="cursor: pointer;">
+                            Xóa sách
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col">Mã sách</th>
+                  <th scope="col">Tên sách</th>
+                  <th scope="col">Giá sách</th>
+                  <th scope="col">Hình ảnh</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let book of _bookService.books" class="align-items-start">
+                  <th scope="row">{{ book.productID }}</th>
+                  <td>{{ book.name }}</td>
+                  <td>{{ book.price }} VNĐ</td>
+                  <td><img [src]="book.imgPath" alt="{{ book.name }}" style="max-height: 45px;"></td>
+                </tr>
+              </tbody>
+        </table>
+    </div>
+</div>

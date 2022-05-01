@@ -1,0 +1,100 @@
+<div class="row">
+    <div class="col-sm-12">
+        <form class="form" [formGroup]="bookForm" (ngSubmit)="onSubmit(bookForm)">
+            <div class="row">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-success mr-1">
+                        Save
+                    </button>
+                    <button type="button" class="btn btn-danger" (click)="onCancel()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+            <input type="hidden" id="_id" name="_id" formControlName="_id">
+            <input type="hidden" 
+                            id="productID" 
+                            class="form-control"
+                            formControlName="productID" 
+                            >
+            <div class="row mt-4">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="productID">
+                            Mã sách
+                        </label>
+                        <input type="text" 
+                            id="productID" 
+                            class="form-control" 
+                            formControlName="productID">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="name">
+                            Tên sách
+                        </label>
+                        <input type="text" 
+                            id="name" 
+                            class="form-control" 
+                            formControlName="name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="cateID">
+                            Mã Loại
+                        </label>
+                        <select name="cateid" id="cateID" formControlName="cateID" class="form-control form-control-sm">
+                            <option *ngFor="let categories of categoriesService.categories"
+                                value="{{categories.cateID}}">{{categories.name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="imgPath">
+                            Hình ảnh
+                        </label>
+                        <input type="text" 
+                            id="imgPath" 
+                            class="form-control" 
+                            formControlName="imgPath">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="price">
+                            Giá sách
+                        </label>
+                        <input type="number" 
+                            id="price" 
+                            class="form-control" 
+                            formControlName="price">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="description">
+                            Miêu tả
+                        </label>
+                        <input type="text" 
+                            id="description" 
+                            class="form-control" 
+                            formControlName="description">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
